@@ -24,12 +24,12 @@
         </a>
 
         <?php if( get_field( 'display_search' ) ) : ?>
-        <button class="header-search-toggle" type="button" aria-label="<?php esc_attr_e( 'Search', 'mm' ); ?>">
+        <button class="header-search-toggle" type="button" aria-label="<?php esc_attr_e( 'Search', 'bulk' ); ?>">
             <?php theme_block_asset('img/icon-search.svg'); ?>
         </button>
         <?php endif; ?>
 
-        <button class="header-menu-toggle" aria-label="<?php esc_attr_e( 'Menu', 'mm' ); ?>">
+        <button class="header-menu-toggle" aria-label="<?php esc_attr_e( 'Menu', 'bulk' ); ?>">
             <span class="menu-bar"></span>
             <span class="menu-bar"></span>
             <span class="menu-bar"></span>
@@ -38,11 +38,11 @@
         <div class="header-collapsable-content">
             <?php if( get_field( 'display_search' ) ) : ?>
             <form action="<?php echo get_home_url(); ?>" class="header-search-form" role="search">
-                <button type="submit" class="header-search-form-submit" aria-label="<?php esc_attr_e( 'Search', 'mm' ); ?>">
+                <button type="submit" class="header-search-form-submit" aria-label="<?php esc_attr_e( 'Search', 'bulk' ); ?>">
                     <?php theme_block_asset('img/icon-search.svg'); ?>
                 </button>
-                <input type="search" name="s" placeholder="<?php esc_attr_e( 'What are you looking for?', 'mm' ); ?>" value="<?php echo esc_attr( get_query_var( 's' ) ); ?>" aria-label="<?php esc_attr_e( 'Search', 'mm' ); ?>">
-                <button type="button" class="header-search-form-close" aria-label="<?php esc_attr_e( 'Close search form', 'mm' ); ?>">
+                <input type="search" name="s" placeholder="<?php esc_attr_e( 'O que você está procurando?', 'bulk' ); ?>" value="<?php echo esc_attr( get_query_var( 's' ) ); ?>" aria-label="<?php esc_attr_e( 'Search', 'bulk' ); ?>">
+                <button type="button" class="header-search-form-close" aria-label="<?php esc_attr_e( 'Close search form', 'bulk' ); ?>">
                     
                 </button>
             </form>
