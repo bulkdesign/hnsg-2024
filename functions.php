@@ -55,7 +55,7 @@ function child_theme_allowed_blocks() {
         'section-background',
         'single-post-content',
         'template-content',
-        'testiominals',
+        'testimonials',
         'title-and-content'
     );
 }
