@@ -59,3 +59,7 @@
         /* MISCELANEOUS */
 
 }
+
+main {
+    margin: var(--block-margin) 0px;
+}
