@@ -1,8 +1,29 @@
 :root{
     /* CONFIGURABLE SETTINGS */
         /* COLORS */
+        --color-white: #FFFFFF;
+        --color-black: #000000;
+        --color-purple: #93327a;
+        --color-turquoise: #398e8a;
+        --color-light-blue: #0ab9e8;
 
         /* BACKGROUND */
+        --medium-purple-color: var(--color-purple);
+        --medium-turquoise-color: var(--color-turquoise);
+        --light-blue-color: var(--color-light-blue);
+
+        /* COLOR SCHEMES */
+        [data-color-scheme|="purple"] {
+            --background-color: var(--medium-purple-color);
+        }
+
+        [data-color-scheme|="turquoise"] {
+            --background-color: var(--medium-turquoise-color);
+        }
+
+        [data-color-scheme|="light-blue"] {
+            --background-color: var(--light-blue-color);
+        }
 
         /* TEXT */
             /* PRIMARY FONT */
