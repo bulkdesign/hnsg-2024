@@ -21,8 +21,11 @@
                 "medium": "Cinza",
                 "dark": "Preto",
                 "purple": "Roxo",
+                "purple-shadow": "Roxo Escuro",
                 "turquoise": "Turquesa",
-                "light-blue": "Azul Bebê"
+                "turquoise-shadow": "Turquesa Escuro",
+                "light-blue": "Azul Bebê",
+                "light-blue-shadow": "Azul Bebê Escuro"
             },
             "default_value": false,
             "return_format": "value",
@@ -51,5 +54,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702775412
+    "modified": 1702798698
 }

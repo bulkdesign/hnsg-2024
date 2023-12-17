@@ -25,12 +25,24 @@
             --background-color: var(--medium-purple-color);
         }
 
+        [data-color-scheme|="purple-shadow"] {
+            --background-color: var(--medium-purple-shadow-color);
+        }
+
         [data-color-scheme|="turquoise"] {
             --background-color: var(--medium-turquoise-color);
         }
 
+        [data-color-scheme|="turquoise-shadow"] {
+            --background-color: var(--medium-turquoise-shadow-color);
+        }
+
         [data-color-scheme|="light-blue"] {
             --background-color: var(--light-blue-color);
+        }
+
+        [data-color-scheme|="light-blue-shadow"] {
+            --background-color: var(--light-blue-shadow-color);
         }
 
         /* TEXT */
