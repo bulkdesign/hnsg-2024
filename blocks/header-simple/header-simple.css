@@ -1,0 +1,29 @@
+.header-simple[data-color-scheme="purple"] {
+    background: var(--background-color);
+    color: var(--color-white);
+}
+
+.header-simple[data-color-scheme="purple-shadow"] {
+    background: var(--background-color);
+    color: var(--color-white);
+}
+
+.header-simple[data-color-scheme="turquoise"] {
+    background: var(--background-color);
+    color: var(--color-white);
+}
+
+.header-simple[data-color-scheme="turquoise-shadow"] {
+    background: var(--background-color);
+    color: var(--color-white);
+}
+
+.header-simple[data-color-scheme="light-blue"] {
+    background: var(--background-color);
+    color: var(--color-white);
+}
+
+.header-simple[data-color-scheme="light-blue-shadow"] {
+    background: var(--background-color);
+    color: var(--color-white);
+}
