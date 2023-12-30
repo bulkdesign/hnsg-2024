@@ -46,6 +46,7 @@ function child_theme_allowed_blocks() {
         'footer-one',
         'footer-two',
         'header',
+        'header-simple',
         'logos-carousel',
         'logos-grid',
         'newsletter-signup-basic',
