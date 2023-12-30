@@ -31,8 +31,13 @@
 .header-simple:not(.scrolled) {
     background: transparent;
     position: relative;
+    transition: 0.3s all ease;
 }
 
-.header-simple:not(.scrolled) a {
+.header-simple:is(.scrolled) {
+    transition: 0.3s all ease;
+}
+
+.header-simple a {
     color: var(--color-white);
 }
