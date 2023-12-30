@@ -88,3 +88,7 @@
 .blocks-container:has(.alignfull) {
     max-width: 100%;
 }
+
+.home main {
+    margin-top: -8rem;
+}
