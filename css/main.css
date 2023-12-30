@@ -85,10 +85,6 @@
     margin: 0 auto;
 }
 
-.blocks-container > * {
-    max-width: var(--full-width);
-}
-
-main {
-    margin: var(--block-margin) 0;
+.blocks-container:has(.alignfull) {
+    max-width: 100%;
 }
