@@ -42,3 +42,15 @@
 .page-hero-carousel:is([data-color-scheme|="light-blue"]) :is(.primary-button:is(:hover, :active, :focus), .secondary-button:is(:hover, :active, :focus), .wp-block-button.is-style-outline > .wp-block-button__link.wp-element-button:is(:hover, :active, :focus)) {
     background: var(--light-blue-shadow-color);
 }
+
+.page-hero-carousel h1 {
+    font: var(--font-headline-3);
+}
+
+.page-hero-carousel-slide {
+    padding: calc(var(--block-margin) * 2) 0;
+}
+
+.page-hero-carousel img {
+    object-position: center 20%;
+}
