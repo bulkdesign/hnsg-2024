@@ -27,3 +27,12 @@
     background: var(--background-color);
     color: var(--color-white);
 }
+
+.header-simple:not(.scrolled) {
+    background: transparent;
+    position: relative;
+}
+
+.header-simple:not(.scrolled) a {
+    color: var(--color-white);
+}
