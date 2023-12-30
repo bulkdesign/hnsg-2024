@@ -1,0 +1,12 @@
+.footer-one-main {
+    grid-template-columns: auto;
+}
+
+.footer-one-column-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.footer-one-column.footer-one-social-media ul {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
