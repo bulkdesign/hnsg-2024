@@ -36,6 +36,11 @@
 
 .header-simple:is(.scrolled) {
     transition: 0.3s all ease;
+    top: 0 !important;
+}
+
+.header-simple-inner {
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .header-simple a {

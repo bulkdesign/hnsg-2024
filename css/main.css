@@ -81,8 +81,8 @@
 }
 
 .blocks-container {
-    max-width: var(--wide-width);
     margin: 0 auto;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .blocks-container:has(.alignfull) {
