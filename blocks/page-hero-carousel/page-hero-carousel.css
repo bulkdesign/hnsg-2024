@@ -51,6 +51,36 @@
     padding: calc(var(--block-margin) * 2) 0;
 }
 
+.page-hero-carousel-wrapper {
+    width: var(--wide-width);
+}
+
+.page-hero-carousel-inner {
+    padding: 0;
+}
+
 .page-hero-carousel img {
     object-position: center 20%;
+}
+
+.page-hero-carousel-navigation {
+    display: none;
+}
+
+:is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next) svg {
+    width: 3.8rem;
+}
+
+:is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next) svg * {
+    stroke: currentColor;
+}
+
+:is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next) svg:is(:active, :focus, :hover) * {
+    stroke: currentColor;
+}
+
+@media (min-width: 768px) {
+    .page-hero-carousel-navigation {
+        display: block;
+    }
 }
