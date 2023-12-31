@@ -2,6 +2,8 @@
     /* CONFIGURABLE SETTINGS */
         /* COLORS */
         --color-white: #FFFFFF;
+        --color-light-grey: #ececec;
+        --color-grey: #586768;
         --color-black: #000000;
         --color-purple: #93327a;
         --color-dark-purple: #70265E;
@@ -61,6 +63,9 @@
 
         /* PRIMARY BUTTON */
             /* STYLE */
+            :is(.primary-button, .secondary-button, .wp-block-button:not(.is-style-outline) > .wp-element-button) {
+                border-radius: 1rem;
+            }
 
             /* LIGHT BACKGROUND COLORS */
 
