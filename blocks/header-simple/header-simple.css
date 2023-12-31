@@ -39,10 +39,19 @@
     top: 0 !important;
 }
 
+.header-simple .logo :is(img, svg) {
+    max-width: 12rem;
+    max-height: 5rem;
+}
+
 .header-simple-inner {
     -webkit-transform: translate3d(0,0,0);
 }
 
 .header-simple a {
     color: var(--color-white);
+}
+
+.header-simple .header-simple-menu-toggle .menu-bar {
+    background-color: var(--color-white);
 }
