@@ -18,7 +18,7 @@
 
 .blocks-container .content-with-media:is(.side-by-side-featured) .content-with-media-content {
     margin-right: calc( 50vw - ( var(--wide-width) / 2));
-    padding: 5rem 0 5rem 5rem;
+    padding: 0 0rem 4rem 2rem;
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured) .content-with-media-content .content-with-media-buttons {
@@ -36,7 +36,7 @@
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured) h2 {
-    font: var(--font-headline-6);
+    font: var(--font-headline-5);
     color: var(--color-white);
 }
 
@@ -45,19 +45,16 @@
 */
 .blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) .content-with-media-media {
     height: auto;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 4rem 4rem 0;
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) .content-with-media-media img {
-    height: 30rem;
+    height: 20rem;
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) {
     text-align: left;
-}
-
-.blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) .content-with-media-content {
-    padding: 5rem 0 5rem 0rem;
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) .content-with-media-content .content-with-media-buttons {
@@ -81,7 +78,6 @@
 ** Certificações
 */
 .blocks-container .content-with-media:is(.side-by-side-featured.certificate) h2 {
-    font: var(--font-headline-6);
     color: var(--color-turquoise);
 }
 
@@ -91,7 +87,7 @@
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured.certificate) .content-with-media-media img {
-    height: 30rem;
+    height: 20rem;
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured.certificate) {
@@ -118,4 +114,20 @@
 
 .blocks-container .content-with-media:is(.side-by-side-featured.certificate) .content-with-media-content .content-with-media-buttons a.primary-button:is(:hover, :active, :focus) {
     background: var(--color-dark-turquoise);
+}
+
+@media (min-width: 768px) {
+    .blocks-container .content-with-media:is(.side-by-side-featured) .content-with-media-content {
+        margin-right: calc(50vw - (var(--wide-width) / 2));
+        padding: 5rem 0 5rem 5rem;
+    }
+
+    .blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) .content-with-media-media {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) .content-with-media-media img {
+        height: 30rem;
+    }
 }
