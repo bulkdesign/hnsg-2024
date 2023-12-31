@@ -27,3 +27,7 @@
     background: var(--background-color);
     color: var(--color-white);
 }
+
+.section-background:has(.side-by-side-featured) {
+    padding: 0;
+}
