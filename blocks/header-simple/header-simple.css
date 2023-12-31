@@ -28,7 +28,7 @@
     color: var(--color-white);
 }
 
-.header-simple:not(.scrolled) {
+.home .header-simple:not(.scrolled) {
     background: transparent;
     position: relative;
     transition: 0.3s all ease;
