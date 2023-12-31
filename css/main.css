@@ -23,6 +23,7 @@
         /* COLOR SCHEMES */
         [data-color-scheme|="purple"] {
             --background-color: var(--medium-purple-color);
+            --background-shadow: var(--medium-purple-shadow-color);
         }
 
         [data-color-scheme|="purple-shadow"] {
@@ -31,6 +32,7 @@
 
         [data-color-scheme|="turquoise"] {
             --background-color: var(--medium-turquoise-color);
+            --background-shadow: var(--medium-turquoise-shadow-color);
         }
 
         [data-color-scheme|="turquoise-shadow"] {
@@ -39,6 +41,7 @@
 
         [data-color-scheme|="light-blue"] {
             --background-color: var(--light-blue-color);
+            --background-shadow: var(--light-blue-shadow-color);
         }
 
         [data-color-scheme|="light-blue-shadow"] {
@@ -85,10 +88,11 @@
     -webkit-transform: translate3d(0,0,0);
 }
 
-.blocks-container:has(.alignfull) {
+.blocks-container > .alignfull {
     max-width: 100%;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .home main {
-    margin-top: -8rem;
+    margin-top: -9rem;
 }
