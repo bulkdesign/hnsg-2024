@@ -113,7 +113,7 @@
         element.addEventListener('click', toggleHeaderSearch);
     });
 
-    document.querySelectorAll('.pre-header a[href^="#"]:not(.ignore)').forEach((element) => {
+    document.querySelectorAll('.top-bar a[href^="#"]:not(.ignore)').forEach((element) => {
         element.addEventListener('click', (event) =>  {
             const link = event.target.closest('a');
             const target = link.getAttribute('href');
