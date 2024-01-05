@@ -3,82 +3,6 @@
     "title": "Top Bar",
     "fields": [
         {
-            "key": "field_64dd126e3a734",
-            "label": "Content",
-            "name": "content",
-            "aria-label": "",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layouts": {
-                "layout_64dd1282258ad": {
-                    "key": "layout_64dd1282258ad",
-                    "name": "text",
-                    "label": "Text",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_64dd128a3a735",
-                            "label": "Text",
-                            "name": "text",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_64dd12913a736": {
-                    "key": "layout_64dd12913a736",
-                    "name": "link",
-                    "label": "Link",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_64dd12963a738",
-                            "label": "Link",
-                            "name": "link",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array"
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                }
-            },
-            "min": "",
-            "max": "",
-            "button_label": "Add Item"
-        },
-        {
             "key": "field_6596d6f005901",
             "label": "Tempo de Espera",
             "name": "waiting_time",
@@ -99,11 +23,11 @@
             "ui": 1
         },
         {
-            "key": "field_64dd12b9a6f91",
-            "label": "Call to Action",
-            "name": "call_to_action",
+            "key": "field_659819acfb3cc",
+            "label": "Social Media",
+            "name": "social_media",
             "aria-label": "",
-            "type": "link",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -112,7 +36,58 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Social Media",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65981a25fb3cd",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_659819acfb3cc"
+                },
+                {
+                    "key": "field_65981a45fb3ce",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_659819acfb3cc"
+                }
+            ]
         }
     ],
     "location": [
@@ -133,5 +108,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704384277
+    "modified": 1704467051
 }
