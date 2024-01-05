@@ -1,43 +1,41 @@
 .top-bar {
-    padding: 0.8rem 0;
+    padding: 1rem 0 1.8rem;
+    background: var(--color-light-grey);
 }
 
 .top-bar-inner {
     max-width: var(--wide-width);
     margin: 0 auto;
-    row-gap: 1.2rem;
-    column-gap: 2.4rem;
 }
 
 .top-bar-content {
     display: flex;
-    flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    column-gap: 2.4rem;
-    justify-content: center;
+}
+
+.top-bar-content li p:first-child {
+    color: var(--color-purple);
+    font-weight: bold;
 }
 
 .top-bar-content li {
-    color: var(--color-bright-green);
-    font-weight: 700;
     list-style: none;
-    line-height: 1.25;
+    font: var(--font-body-small);
+    display: flex;
+    column-gap: 0.5rem;
 }
 
-.top-bar-content li:not(:last-child) {
-    padding-right: 2.4rem;
-    border-right: 0.2rem solid;
+.top-bar-content p {
+    margin-bottom: 0;
 }
 
-.top-bar-content li a {
-    --link-color: var(--color-bright-green);
-    text-decoration: none;
+.top-bar-content p strong {
+    color: var(--color-purple);
 }
 
-.top-bar .tertiary-button {
-    font-weight: 700;
-    line-height: 1.25;
+.top-bar-social-media {
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -55,27 +53,42 @@
     .top-bar-inner {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
-    .top-bar-content {
-        column-gap: 2.4rem;
-        justify-content: flex-start;
-        margin-right: auto;
+    .top-bar-social-media {
+        display: block;
     }
 
-    .top-bar .tertiary-button {
-        margin-left: auto;
-    }
-}
-
-@media (min-width: 1200px) {
-    .top-bar-content {
-        column-gap: 4.8rem;
+    .top-bar-social-media ul {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin-bottom: 0;
     }
 
-    .top-bar-content li:not(:last-child) {
-        padding-right: 4.8rem;
+    .top-bar-social-media ul li {
+        list-style: none;
+    }
+
+    .top-bar-social-media ul li a {
+        display: flex;
+        align-items: center;
+    }
+
+    .top-bar-social-media ul li a :is(svg, img) {
+        width: 1.5rem;
+        height: 1.5rem;
+        object-fit: contain;
+        flex-shrink: 0;
+        margin-left: 0.8em;
+    }
+
+    .top-bar-social-media ul li a>svg * {
+        fill: var(--color-grey);
+    }
+
+    .top-bar-social-media ul li a:is(:hover, :active, :focus)>svg * {
+        fill: var(--color-purple);
     }
 }
