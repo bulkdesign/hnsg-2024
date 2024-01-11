@@ -60,7 +60,8 @@ function child_theme_allowed_blocks() {
         'template-content',
         'testimonials',
         'title-and-content',
-        'top-bar'
+        'top-bar',
+        'search'
     );
 }
 add_filter( 'theme_allowed_blocks', 'child_theme_allowed_blocks', 10, 0);
