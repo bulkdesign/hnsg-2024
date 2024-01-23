@@ -45,7 +45,6 @@ function child_theme_allowed_blocks() {
         'faq-accordion',
         'footer-one',
         'footer-two',
-        'header',
         'header-simple',
         'latest-news',
         'logos-carousel',
