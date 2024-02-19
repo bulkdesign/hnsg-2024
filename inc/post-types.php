@@ -8,3 +8,63 @@
 /**
  * Theme's post types
  */
+// Médicos
+register_post_type('medico',
+    array(
+        'labels'			=> array(
+            'name'			=> __('Médicos'),
+            'singular_name' =>	__('Médico')
+            ),
+        'menu_position'     => 6,
+        'public'			=> true,
+        'has_archive'		=> true,
+        'taxonomies'		=> array( 'especialidade',''),
+        'menu_icon'			=> 'dashicons-nametag',
+        'supports'			=>	array('title', 'thumbnail', 'taxonomy', 'page-attributes'),
+    )
+);
+
+// Especialidades
+register_post_type('especialidades',
+    array(
+        'labels'			=> array(
+            'name'			=> __('Especialidades'),
+            'singular_name' =>	__('Especialidade')
+            ),
+        'menu_position'     => 7,
+        'public'			=> true,
+        'has_archive'		=> true,
+        'menu_icon'			=> 'dashicons-editor-spellcheck',
+        'supports'			=>	array('title'),
+    )
+);
+
+// Convênios
+register_post_type('convenios',
+    array(
+        'labels'			=> array(
+            'name'			=> __('Convênios'),
+            'singular_name' =>	__('Convênio')
+            ),
+        'menu_position'     => 9,
+        'public'			=> true,
+        'has_archive'		=> true,
+        'menu_icon'			=> 'dashicons-admin-multisite',
+        'supports'			=>	array('title', 'page-attributes', 'thumbnail'),
+    )
+);
+
+// Locais de Atendimento
+register_post_type('locais_atendimento',
+    array(
+        'labels'			=> array(
+            'name'			=> __('Locais de atendimento'),
+            'singular_name' =>	__('Local de atendimento')
+            ),
+        'menu_position'     => 10,
+        'public'			=> true,
+        'has_archive'		=> true,
+        'menu_icon'			=> 'dashicons-groups',
+        'supports'			=>	array('title', 'page-attributes'),
+    )
+);
