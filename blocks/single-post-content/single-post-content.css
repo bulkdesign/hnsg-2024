@@ -1,0 +1,9 @@
+.single-post-content-header {
+    padding-top: calc(var(--block-margin) / 2);
+}
+
+.single-post-content h1 {
+    font: var(--font-headline-3);
+    color: var(--color-dark-purple);
+    line-height: normal;
+}
