@@ -28,6 +28,15 @@
     max-height: 5rem;
 }
 
+.header-simple .featured-menu li:last-child a {
+    background: var(--color-dark-purple);
+    border-radius: var(--element-border-radius);
+}
+
+.header-simple nav ul.featured-menu li a {
+    font: var(--font-body-small);
+}
+
 .header-simple a {
     color: var(--color-white);
 }
