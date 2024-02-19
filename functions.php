@@ -29,7 +29,6 @@ function child_theme_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_scripts', 30 );
 
-
 /**
  * Filter allowed blocks
  */
@@ -41,6 +40,7 @@ function child_theme_allowed_blocks() {
         'contact-information',
         'content-in-columns',
         'content-with-media',
+        'corpo-clinico',
         'cookies-disclaimer',
         'faq-accordion',
         'footer-one',
@@ -70,7 +70,7 @@ add_filter( 'theme_allowed_blocks', 'child_theme_allowed_blocks', 10, 0);
  *
  */ 
 function child_theme_posts_archive_with_filter_taxonomies(){
-    //return array('resource_type', 'topic');
+    return array('especialidade');
 }
 add_action( 'posts_archive_with_filter_taxonomies', 'child_theme_posts_archive_with_filter_taxonomies' );
 
