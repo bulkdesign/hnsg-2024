@@ -27,3 +27,17 @@
 .header-simple a {
     color: var(--color-white);
 }
+
+.header-simple .sub-menu a {
+    font: var(--font-body-small);
+}
+
+.header-simple .header-simple-menu-toggle .menu-bar {
+    background: var(--color-white);
+}
+
+@media (min-width: 992px) {
+    .header-simple nav ul > li.menu-item-has-children > .sub-menu {
+        width: max-content;
+    }
+}
