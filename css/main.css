@@ -67,6 +67,14 @@
                 border-radius: 1rem;
             }
 
+            :is(.wp-block-button:not(.is-style-outline)>.wp-element-button) {
+                background-color: var(--color-dark-purple);
+            }
+
+            :is(.wp-block-button:not(.is-style-outline)>.wp-element-button):is(:hover, :active, :focus) {
+                background-color: var(--color-purple);
+            }
+
             /* LIGHT BACKGROUND COLORS */
 
             /* DARK BACKGROUND COLORS */
@@ -81,10 +89,13 @@
         /* FORMS */
 
         /* EYEBROW */
+        --eyebrow-color: var(--color-dark-purple);
 
         /* MARGINS */
 
         /* MISCELANEOUS */
+        --link-color: var(--color-purple);
+        --hover-link-color: var(--color-dark-purple);
         --element-border-radius: 1rem;
 
 }
@@ -101,4 +112,31 @@
 
 .home main {
     margin-top: -9rem;
+}
+
+.default-template {
+    margin-top: calc(var(--block-margin) / 2);
+}
+
+.category .posts-archive-with-filter header {
+    padding-top: calc(var(--block-margin) / 2);
+}
+
+.category .posts-archive-with-filter header :is(h1, h2, h3) {
+    color: var(--color-dark-purple);
+}
+
+.page-title h1 {
+    font: var(--font-headline-3);
+    color: var(--color-dark-purple);
+}
+
+.page h2 {
+    font: var(--font-headline-5);
+    color: var(--color-purple);
+    line-height: normal;
+}
+
+.wp-block-gallery {
+    padding: var(--page-padding) 0;
 }
