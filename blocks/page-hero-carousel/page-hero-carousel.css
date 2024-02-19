@@ -75,8 +75,8 @@
     stroke: currentColor;
 }
 
-:is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next) svg:is(:active, :focus, :hover) * {
-    stroke: currentColor;
+:is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next):is(:hover, :focus, :active) svg * {
+    stroke: var(--color-light-grey);
 }
 
 @media (min-width: 768px) {
