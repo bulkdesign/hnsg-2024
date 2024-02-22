@@ -7,7 +7,7 @@
 
 ?>
 
-<div <?php theme_block_attributes( $block, 'search alignwide' ); ?>>
+<div <?php theme_block_attributes( $block, 'search-block alignwide' ); ?>>
     <div class="search-wrapper">
         <?php $icon = get_field( 'icon' ); ?>
         <?php if(!empty($icon)): ?>
