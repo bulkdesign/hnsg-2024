@@ -66,15 +66,6 @@ function child_theme_allowed_blocks() {
 add_filter( 'theme_allowed_blocks', 'child_theme_allowed_blocks', 10, 0);
 
 /**
- * Define Filters for achive
- *
- */ 
-function child_theme_posts_archive_with_filter_taxonomies(){
-    return array('especialidade');
-}
-add_action( 'posts_archive_with_filter_taxonomies', 'child_theme_posts_archive_with_filter_taxonomies' );
-
-/**
  * Filter the except length to 20 words.
  *
  * @param int $length Excerpt length.
