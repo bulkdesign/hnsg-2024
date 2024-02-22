@@ -118,11 +118,11 @@
     margin-top: calc(var(--block-margin) / 2);
 }
 
-.category .posts-archive-with-filter header {
+body:is(.archive, .category, .search, .search-results) .posts-archive-with-filter header {
     padding-top: calc(var(--block-margin) / 2);
 }
 
-.category .posts-archive-with-filter header :is(h1, h2, h3) {
+body:is(.archive, .category, .search, .search-results) .posts-archive-with-filter header :is(h1, h2, h3) {
     color: var(--color-dark-purple);
 }
 
