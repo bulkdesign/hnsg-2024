@@ -131,7 +131,7 @@
     color: var(--color-dark-purple);
 }
 
-.page h2 {
+.page h2, .single h2 {
     font: var(--font-headline-5);
     color: var(--color-purple);
     line-height: normal;
@@ -139,4 +139,10 @@
 
 .wp-block-gallery {
     padding: var(--page-padding) 0;
+}
+
+.wp-caption-text {
+    font: var(--font-body-small);
+    padding-top: calc(var(--page-padding) / 2);
+    color: var(--color-grey);
 }
