@@ -34,14 +34,11 @@ add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_scripts', 30 );
  */
 function child_theme_allowed_blocks() {
 	return array(
-        'advanced-call-to-action',
-        'cards-with-hover-content',
         'columns-with-content',
         'contact-information',
         'content-in-columns',
         'content-with-media',
         'corpo-clinico',
-        'cookies-disclaimer',
         'faq-accordion',
         'footer-one',
         'footer-two',
@@ -49,9 +46,9 @@ function child_theme_allowed_blocks() {
         'latest-news',
         'logos-carousel',
         'logos-grid',
-        'newsletter-signup-basic',
         'page-hero',
         'page-hero-carousel',
+        'photos-carousel',
         'posts-archive-with-filter',
         'section-background',
         'services',
