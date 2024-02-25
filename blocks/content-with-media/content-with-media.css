@@ -70,7 +70,7 @@
 }
 
 .blocks-container .content-with-media:is(.side-by-side-featured.azul-bebe) .content-with-media-content .content-with-media-buttons a.primary-button:is(:hover, :active, :focus) {
-    background: var(--color-black);
+    background: var(--color-grey);
     color: var(--color-white);
 }
 
