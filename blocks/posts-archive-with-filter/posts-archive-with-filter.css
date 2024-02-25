@@ -1,0 +1,11 @@
+.posts-archive-with-filter-filters-group-title h2 {
+    color: var(--color-purple);
+}
+
+.posts-archive-with-filter-filters-group-options-item label:is(:hover, :focus, :active) {
+    background-color: var(--color-purple);
+}
+
+.posts-archive-with-filter-filters-group-options-item input:checked~label {
+    background-color: var(--color-dark-purple);
+}
