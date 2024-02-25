@@ -63,16 +63,16 @@
 
         /* PRIMARY BUTTON */
             /* STYLE */
-            :is(.primary-button, .secondary-button, .wp-block-button:not(.is-style-outline) > .wp-element-button) {
+            :is(.primary-button, .secondary-button, .wpcf7-submit, .wp-block-button:not(.is-style-outline) > .wp-element-button) {
                 border-radius: 1rem;
             }
 
-            :is(.primary-button, .wp-block-button:not(.is-style-outline) > .wp-element-button) {
+            :is(.primary-button, .wpcf7-submit, .wp-block-button:not(.is-style-outline) > .wp-element-button) {
                 background-color: var(--color-purple);
                 border: 0;
             }
 
-            :is(.primary-button, .wp-block-button:not(.is-style-outline)>.wp-element-button):is(:hover, :active, :focus) {
+            :is(.primary-button, .wpcf7-submit, .wp-block-button:not(.is-style-outline)>.wp-element-button):is(:hover, :active, :focus) {
                 background-color: var(--color-dark-purple);
             }
 
