@@ -136,10 +136,34 @@ body:is(.archive, .category, .search, .search-results) .posts-archive-with-filte
     color: var(--color-dark-purple);
 }
 
-.page h2, .single h2 {
-    font: var(--font-headline-5);
+/* PAGE DEFAULT TEMPLATE */
+body:is(.page, .single):not(.home) .blocks-container :is(h1, h2, h3, h4, h5, h6) {
     color: var(--color-purple);
     line-height: normal;
+}
+
+.page h1 {
+    font: var(--font-headline-3);
+}
+
+.page h2 {
+    font: var(--font-headline-5);
+}
+
+.page h3 {
+    font: var(--font-headline-6);
+}
+
+.page h4 {
+    font: var(--font-headline-7);
+}
+
+.page h5 {
+    font: var(--font-headline-8);
+}
+
+.page h6 {
+    font: var(--font-headline-9);
 }
 
 .wp-block-gallery {
