@@ -54,6 +54,21 @@ register_post_type('convenios',
     )
 );
 
+// Convênios Cobertura
+register_post_type('convenios_cobertura',
+    array(
+        'labels'			=> array(
+            'name'			=> __('Cobertura dos Convênios'),
+            'singular_name' =>	__('Cobertura do Convênio')
+            ),
+        'menu_position'     => 10,
+        'public'			=> true,
+        'has_archive'		=> true,
+        'menu_icon'			=> 'dashicons-groups',
+        'supports'			=>	array('title', 'page-attributes'),
+    )
+);
+
 // Locais de Atendimento
 register_post_type('locais_atendimento',
     array(
