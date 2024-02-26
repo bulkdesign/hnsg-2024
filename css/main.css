@@ -175,3 +175,96 @@ body:is(.page, .single):not(.home) .blocks-container :is(h1, h2, h3, h4, h5, h6)
     padding-top: calc(var(--page-padding) / 2);
     color: var(--color-grey);
 }
+
+/* CONVENIOS ARCHIVE */
+.post-type-archive-convenios .post-loop .post-loop-image img {
+    object-fit: contain;
+    object-position: center;
+    max-height: 12rem;
+}
+
+/* PAGE SIDEBAR */
+.page-grid {
+    display: block;
+}
+
+.page-grid .sidebar {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    width: var(--full-width);
+}
+
+.page-grid .sidebar nav {
+    width: 100%;
+    background: var(--color-offwhite);
+    padding: var(--page-padding);
+    border-radius: var(--element-border-radius);
+}
+
+.page-grid .sidebar h3 {
+    font: var(--font-headline-8);
+}
+
+.page-grid .sidebar ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.page-grid .sidebar ul li {
+    list-style: none;
+    font: var(--font-body-small);
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    column-gap: calc(var(--column-gap) / 2);
+    align-items: center;
+    margin: var(--page-padding) 0 0;
+}
+
+.page-grid .sidebar ul li p {
+    margin-bottom: 0;
+}
+
+.page-grid .sidebar ul li p span {
+    font: var(--font-body-small);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .page-grid {
+        display: grid;
+        grid-template-columns: 1fr 30rem;
+        column-gap: var(--column-gap);
+    }
+
+    .page-grid .sidebar {
+        padding: 0 var(--page-padding);
+        width: 100%;
+    }
+
+    .page-grid .sidebar nav {
+        position: sticky;
+        top: calc(var(--fixed-header-height) + calc(var(--block-margin) / 2));
+        background: var(--color-offwhite);
+        padding: var(--page-padding);
+        border-radius: var(--element-border-radius);
+    }
+
+    .page-grid .sidebar ul li p span {
+        font: var(--font-body-xsmall);
+        font-weight: bold;
+        word-break: break-all;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-grid .sidebar ul li p span {
+        font: var(--font-body-small);
+        font-weight: bold;
+    }
+}
+
+/* SINGLE CUSTOM POST TYPE */
+.single-post-thumbnail {
+    margin-bottom: calc(var(--block-margin) / 2);
+}
