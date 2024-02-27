@@ -1,0 +1,56 @@
+{
+    "key": "group_5aaca07194439",
+    "title": "Opções da Especialidade",
+    "fields": [
+        {
+            "key": "field_58f76b3c7a5c1",
+            "label": "Médicos",
+            "name": "medicos",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Selecione o médico relacionado a esta especialidade.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "medico"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "elements": [
+                "featured_image"
+            ],
+            "bidirectional": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "especialidades"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709026851
+}
