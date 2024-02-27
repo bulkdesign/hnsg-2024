@@ -176,6 +176,11 @@ body:is(.page, .single):not(.home) .blocks-container :is(h1, h2, h3, h4, h5, h6)
     color: var(--color-grey);
 }
 
+/* DEFAULT WORDPRESS SEARCH */
+.wp-block-search__button.has-icon {
+    padding: var(--page-padding);
+}
+
 /* CONVENIOS ARCHIVE */
 .post-type-archive-convenios .post-loop .post-loop-image img {
     object-fit: contain;
