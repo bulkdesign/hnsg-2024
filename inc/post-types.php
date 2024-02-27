@@ -83,3 +83,18 @@ register_post_type('locais_atendimento',
         'supports'			=>	array('title', 'page-attributes'),
     )
 );
+
+// Outras Funções
+register_post_type('outras_funcoes',
+    array(
+        'labels'			=> array(
+            'name'			=> __('Outras funções'),
+            'singular_name' =>	__('Outras funções')
+            ),
+        'menu_position'     => 10,
+        'public'			=> true,
+        'has_archive'		=> true,
+        'menu_icon'			=> 'dashicons-businessman',
+        'supports'			=>	array('title', 'page-attributes'),
+    )
+);
