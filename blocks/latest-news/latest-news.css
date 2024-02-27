@@ -14,6 +14,7 @@
 
 .latest-news h2 {
     font: var(--font-headline-3);
+    color: var(--color-purple);
 }
 
 .latest-news p {
