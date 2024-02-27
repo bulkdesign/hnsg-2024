@@ -74,11 +74,11 @@
 
                 <ul>
                     <?php if (! empty( get_field( 'crm' ) ) ): ?>
-                        <li>CRM: <?php the_field('crm'); ?></li>
+                        <li><strong>CRM:</strong> <?php the_field('crm'); ?></li>
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'especilidade_medica' ) ) ): ?>
-					    <li>Especialidade(s) Médica:<br>
+					    <li><strong>Especialidade(s) Médica:</strong><br>
                             <?php
                                 foreach ($especialidade_names as $especialidade_name) {
                                     echo '– ' . $especialidade_name . "<br>";
@@ -88,15 +88,15 @@
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'atende_no_hospital' ) ) ): ?>
-                        <li>Atende no Hospital? <?php the_field('atende_no_hospital'); ?>
+                        <li><strong>Atende no Hospital?</strong> <?php the_field('atende_no_hospital'); ?>
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'obs_medico' ) ) ): ?>
-                        <li>Observações: <?php the_field('obs_medico'); ?></li>
+                        <li><strong>Observações:</strong> <?php the_field('obs_medico'); ?></li>
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'locais_atendimento' ) ) ): ?>
-					    <li>Locais de Atendimento:<br>
+					    <li><strong>Locais de Atendimento:</strong><br>
                             <?php
                                 foreach ($locais_names as $local_name) {
                                     echo '– ' . $local_name . "<br>";
@@ -106,7 +106,7 @@
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'outras_funcoes' ) ) ): ?>
-					    <li>Outras Funções:<br>
+					    <li><strong>Outras Funções:</strong><br>
                             <?php
                                 foreach ($funcoes_names as $funcao_name) {
                                     echo '– ' . $funcao_name . "<br>";
@@ -116,11 +116,11 @@
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'telefone_agendamento' ) ) ): ?>
-                        <li>Telefone de Agendamento: <?php the_field('telefone_agendamento'); ?></li>
+                        <li><strong>Telefone de Agendamento:</strong> <?php the_field('telefone_agendamento'); ?></li>
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'telefone_exame' ) ) ): ?>
-                        <li>Telefone do Exame: <?php the_field('telefone_exame'); ?></li>
+                        <li><strong>Telefone do Exame:</strong> <?php the_field('telefone_exame'); ?></li>
                     <?php endif; ?>
 
                 </ul>
