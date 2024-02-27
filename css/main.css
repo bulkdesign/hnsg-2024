@@ -275,11 +275,13 @@ body:is(.page, .single):not(.home) .blocks-container :is(h1, h2, h3, h4, h5, h6)
     margin-bottom: calc(var(--block-margin) / 2);
 }
 
-.single-medico ul {
+.single-medico section.default-template ul,
+.single-convenios section.default-template ul {
     list-style: none;
     padding: 0;
 }
 
-.single-medico ul li {
+.single-medico section.default-template ul li,
+.single-convenios section.default-template ul li {
     padding: calc(var(--page-padding) / 2) 0;
 }
