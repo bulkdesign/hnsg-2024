@@ -38,7 +38,6 @@ function child_theme_allowed_blocks() {
         'contact-information',
         'content-in-columns',
         'content-with-media',
-        'corpo-clinico',
         'faq-accordion',
         'footer-one',
         'footer-two',
