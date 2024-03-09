@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HNSG\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-04 09:32+0000\n"
+"PO-Revision-Date: 2024-03-04 09:35+0000\n"
+"Last-Translator: Hospital HNSG\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.3\n"
+"X-Domain: bulk"
+
+#: blocks/footer-one/footer-one.php:95 blocks/top-bar/top-bar.php:87
+msgid "(Opens in a new tab)"
+msgstr "(Abre em uma nova aba)"
+
+#: blocks/top-bar/block.php:16
+msgid "A bar to be displayed above the header"
+msgstr "Uma barra para ser exibida acima do cabeçalho"
+
+#. Author of the theme
+msgid "Bulk Design"
+msgstr ""
+
+#. Description of the theme
+msgid "Bulk Design's WordPress Theme for HNSG"
+msgstr "Tema do HNSG feito pela Bulk Design"
+
+#: blocks/services/block.php:16
+msgid "Featured services"
+msgstr "Serviços Destacados"
+
+#. Name of the theme
+msgid "HNSG"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://bulkdesign.com.br"
+msgstr ""
+
+#. URI of the theme
+msgid "https://hnsg.org.br"
+msgstr ""
+
+#: blocks/latest-news/block.php:15
+msgid "Latest News"
+msgstr "Últimas Notícias"
+
+#: blocks/latest-news/block.php:16
+msgid "Most recent article and a list of other articles"
+msgstr "Notícia mais recente de um lado e do outro uma lista de outros artigos"
+
+#: blocks/latest-news/latest-news.php:69
+msgid "Next Logo"
+msgstr "Próximo Logo"
+
+#: blocks/latest-news/latest-news.php:66
+msgid "Previous Logo"
+msgstr "Logo Anterior"
+
+#: blocks/search/block.php:16
+msgid "Search bar that results in finding doctors and specialists"
+msgstr "Uma barra de busca para encontrar especialistas"
+
+#: blocks/services/block.php:15
+msgid "Services"
+msgstr "Serviços"
+
+#: blocks/search/block.php:15
+msgid "Specialist Search"
+msgstr "Busca de Especialistas"
+
+#: blocks/top-bar/block.php:15
+msgid "Top Bar"
+msgstr "Barra do Topo"
