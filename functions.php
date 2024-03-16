@@ -41,6 +41,7 @@ function child_theme_allowed_blocks() {
         'faq-accordion',
         'footer-one',
         'header-simple',
+        'instagram-gallery',
         'latest-news',
         'logos-carousel',
         'logos-grid',
