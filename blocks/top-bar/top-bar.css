@@ -26,7 +26,8 @@
     column-gap: 0.5rem;
 }
 
-.top-bar-content p {
+.top-bar .top-bar-content p {
+    color: var(--color-purple);
     margin-bottom: 0;
 }
 
