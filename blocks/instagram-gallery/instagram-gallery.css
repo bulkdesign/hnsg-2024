@@ -1,0 +1,21 @@
+.instagram-gallery .instagram-gallery-title h2 {
+    font: var(--font-headline-5);
+    color: var(--color-white);
+}
+
+.instagram-gallery .instagram-gallery-social-media li svg path {
+    fill: var(--color-white);
+    transition: 0.3s ease all;
+}
+
+.instagram-gallery .instagram-gallery-social-media li:is(:active, :hover, :focus) svg path {
+    fill: var(--color-light-blue);
+}
+
+.instagram-gallery .instagram-gallery-content #sb_instagram .sbi_photo {
+    border-radius: var(--element-border-radius);
+}
+
+.instagram-gallery .instagram-gallery-content #sb_instagram a.sbi_photo:is(:active, :hover, :focus) {
+    opacity: 0.7 !important;
+}
