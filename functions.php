@@ -40,7 +40,6 @@ function child_theme_allowed_blocks() {
         'content-with-media',
         'faq-accordion',
         'footer-one',
-        'footer-two',
         'header-simple',
         'latest-news',
         'logos-carousel',
