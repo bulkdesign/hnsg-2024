@@ -1,0 +1,8 @@
+.page-grid:has(.sidebar) .content .photos-carousel {
+    margin-top: 0;
+    row-gap: 0;
+}
+
+.page-grid:has(.sidebar) .content .photos-carousel:is([data-layout="1-wide-left"]) .photos-carousel-list-wrapper {
+    padding-left: 0;
+}
