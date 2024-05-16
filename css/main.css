@@ -239,7 +239,7 @@ body:is(.page, .single):not(.home) .blocks-container :is(h1, h2, h3, h4, h5, h6)
 @media (min-width: 768px) {
     .page-grid {
         display: grid;
-        grid-template-columns: 1fr 30rem;
+        grid-template-columns: 1fr 30%;
         column-gap: var(--column-gap);
     }
 
@@ -254,6 +254,10 @@ body:is(.page, .single):not(.home) .blocks-container :is(h1, h2, h3, h4, h5, h6)
         background: var(--color-offwhite);
         padding: var(--page-padding);
         border-radius: var(--element-border-radius);
+    }
+
+    .page-grid .sidebar nav h3 {
+        text-align: center;
     }
 
     .page-grid .sidebar ul li p span {
