@@ -113,4 +113,44 @@
             <p><?php echo get_bloginfo(); ?> &copy; <?php echo esc_attr( date( 'Y' ) ); ?> <?php the_field( 'copyright' ); ?></p>
         <?php endif; ?>
     </div>
+
+    <?php if ( get_field( 'enable_footer_chatbot' ) ): ?>
+        <div id="chtflt">
+            <script type="text/javascript">
+                var chtfltUrl = "https://sac-softmarketing.ascbrazil.com.br/Chat/id/hnsg";
+                var chtfltWidthLogin = "";
+                var chtfltHeightLogin = "540";
+                var chtfltWidth = "";
+                var chtfltHeight = "540";
+                var chtfltWidthPesquisa = "";
+                var chtfltHeightPesquisa = "540";
+                var chtfltTitulo = "Agendamento de Consultas e Exames";
+                var chtfltVarComplementar = "";
+                var chtfltTema = "skin-magenta";
+                var chtfltLanguage = "pt-BR";
+                var chtfltRobo = "0";
+                var chtfltUrlImg = "https://www.hnsg.org.br/uploads/icone.png";
+            </script>
+            <link rel="stylesheet" href="https://sac-softmarketing.ascbrazil.com.br/public/chat/new/18/chatFlut.css">
+        </div>
+
+        <script type="text/javascript">
+            var section = document.createElement('section');
+            section.className = 'avenue-messenger minimized';
+            document.getElementsByTagName('body')[0].appendChild(section);
+            section.innerHTML = `<div id="div_chat_content"></div>`;
+
+            function myInitFunction() {
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    document.getElementsByTagName('body')[0].appendChild(script);
+                    script.innerHTML = `$("#div_chat_content").load("https://station.softmarketing.com.br/hnsg/webchat/index.html");`;
+            }
+
+
+            setTimeout(function() {
+            myInitFunction();
+            }, 1000);
+        </script>
+    <?php endif; ?>
 </footer>
