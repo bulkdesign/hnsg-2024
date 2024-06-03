@@ -313,6 +313,34 @@
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1
+        },
+        {
+            "key": "field_665df82d9d5a2",
+            "label": "Footer Chatbot Script",
+            "name": "footer_chatbot_script",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664ba56b2bdc6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 10,
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -333,5 +361,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716237209
+    "modified": 1717434461
 }
