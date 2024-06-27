@@ -6,3 +6,13 @@
 .page-grid:has(.sidebar) .content .photos-carousel:is([data-layout="1-wide-left"]) .photos-carousel-list-wrapper {
     padding-left: 0;
 }
+
+.photos-carousel > * {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .photos-carousel-list-item :is(svg, img) {
+        height: 30rem;
+    }
+}
