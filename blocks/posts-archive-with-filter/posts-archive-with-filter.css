@@ -9,3 +9,13 @@
 .posts-archive-with-filter-filters-group-options-item input:checked~label {
     background-color: var(--color-dark-purple);
 }
+
+.posts-archive-with-filter .post-loop a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.posts-archive-with-filter span.read-more {
+    margin-top: auto;
+}
