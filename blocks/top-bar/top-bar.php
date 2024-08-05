@@ -40,8 +40,8 @@
             ?>
 
             <?php $result = fetchData();
-                
-            if ($result['status'] == 'success') : ?>
+
+            if ($result['status'] == 'success' && !empty($result['data'][0]['HR']) && !empty($result['data'][0]['MI']) && !empty($result['data'][0]['HR_ADULTO']) && !empty($result['data'][0]['MI_ADULTO'])) : ?>
                 <li>
                     <p>Tempo de Espera:</p>
                     <p>PA Pediátrico é de <strong><?php if($array[0]->HR != "00h") : echo $array[0]->HR; endif; echo $array[0]->MI; ?></strong> | PA Adulto é de <?php if($array[0]->HR_ADULTO != "00h") : echo $array[0]->HR_ADULTO; endif; echo $array[0]->MI_ADULTO; ?></p>
