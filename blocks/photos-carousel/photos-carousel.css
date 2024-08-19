@@ -10,9 +10,3 @@
 .photos-carousel > * {
     width: 100%;
 }
-
-@media (min-width: 768px) {
-    .photos-carousel-list-item :is(svg, img) {
-        height: 30rem;
-    }
-}
