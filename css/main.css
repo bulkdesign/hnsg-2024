@@ -324,3 +324,8 @@ body:is(.page, .single):not(.home) .blocks-container :is(h1, h2, h3, h4, h5, h6)
 .single-convenios section.default-template ul li {
     padding: calc(var(--page-padding) / 2) 0;
 }
+
+/* DOC NEWS TEMPLATE */
+:is(.page-template-template-docnews) :is(.top-bar, .header-simple, footer) {
+    display: none;
+}
