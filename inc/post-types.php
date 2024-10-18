@@ -44,15 +44,18 @@ register_post_type('convenios',
     array(
         'labels'			=> array(
             'name'			=> __('Convênios'),
-            'singular_name' =>	__('Convênio')
-            ),
+            'singular_name'	=> __('Convênio')
+        ),
         'menu_position'     => 9,
         'public'			=> true,
         'has_archive'		=> true,
         'menu_icon'			=> 'dashicons-admin-multisite',
-        'supports'			=>	array('title', 'page-attributes', 'thumbnail'),
+        'supports'			=> array('title', 'page-attributes', 'thumbnail'),
+        'taxonomies'        => array('category'),
+        'hierarchical'      => true,
     )
 );
+
 
 // Convênios Cobertura
 register_post_type('convenios_cobertura',
@@ -96,5 +99,23 @@ register_post_type('outras_funcoes',
         'has_archive'		=> true,
         'menu_icon'			=> 'dashicons-businessman',
         'supports'			=>	array('title', 'page-attributes'),
+    )
+);
+
+// Eu Venci
+register_post_type('eu-venci',
+    array(
+        'labels'			=> array(
+            'name'			=> __('Eu Venci'),
+            'singular_name' =>	__('Eu Venci')
+            ),
+        'menu_position'     => 5,
+        'public'			=> true,
+        'has_archive'		=> false,
+        'menu_icon'			=> 'dashicons-awards',
+        'supports'			=>	array('title', 'editor', 'page-attributes', 'thumbnail'),
+        'show_in_rest'      => true,
+        'taxonomies'        => array('category'),
+        'hierarchical'      => true,
     )
 );
