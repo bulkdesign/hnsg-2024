@@ -18,7 +18,6 @@ register_post_type('medico',
         'menu_position'     => 6,
         'public'			=> true,
         'has_archive'		=> true,
-        'taxonomies'		=> array( 'especialidade',''),
         'menu_icon'			=> 'dashicons-nametag',
         'supports'			=>	array('title', 'thumbnail', 'taxonomy', 'page-attributes'),
     )
