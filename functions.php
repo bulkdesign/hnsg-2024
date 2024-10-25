@@ -56,7 +56,8 @@ function child_theme_allowed_blocks() {
         'testimonials',
         'title-and-content',
         'top-bar',
-        'search'
+        'search',
+        'doc-search-with-filter'
     );
 }
 add_filter( 'theme_allowed_blocks', 'child_theme_allowed_blocks', 10, 0);
