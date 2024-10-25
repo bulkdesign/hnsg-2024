@@ -23,7 +23,7 @@
 
         <h2><?php echo esc_attr( get_field('title') ); ?></h2>	
 
-        <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <form role="search" method="post" id="searchform" action="<?php echo esc_url( home_url( '/hospital/corpo-clinico/' ) ); ?>">
             <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php echo esc_attr( get_field('placeholder') ); ?>" />
             <input type="submit" class="primary-button" id="searchsubmit" value="<?php echo esc_attr( get_field('submit_text') ); ?>" />
         </form>
