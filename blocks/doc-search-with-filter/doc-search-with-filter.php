@@ -62,8 +62,8 @@ if ( is_search() || empty( $filters ) || ! empty( $filters['s'] ) ) {
                 $args = array(
                     'post_type'      => $post_types,
                     'paged'          => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
-                    'orderby'        => 'date',
-                    'order'          => 'desc',
+                    'orderby'        => 'title',
+                    'order'          => 'asc',
                     // phpcs:ignore
                     'posts_per_page' => get_field( 'posts_per_page' ) ? get_field( 'posts_per_page' ) : get_option( 'posts_per_page' ),
                     // phpcs:ignore
@@ -130,8 +130,8 @@ if ( is_search() || empty( $filters ) || ! empty( $filters['s'] ) ) {
                                         <?php echo $especialidade_titulo; ?>
                                     <?php endif; ?>
 
-                                    <!-- ATENDE NO HOSPITAL -->
-                                    <p>Atende no Hospital: <strong><?php the_field( 'atende_no_hospital', get_the_ID() ); ?></strong></p>
+                                    <!-- CONSULTORIO NO HOSPITAL -->
+                                    <p>Consultório no Hospital: <strong><?php the_field( 'atende_no_hospital', get_the_ID() ); ?></strong></p>
 
                                     <a href="<?php the_permalink(); ?>" class="read-more">
                                         <span class="primary-button"><?php esc_html_e( 'Mais informações', 'bulk' ); ?></span>
