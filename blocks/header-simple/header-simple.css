@@ -58,6 +58,10 @@
     background: var(--color-white);
 }
 
+.header-simple.search-open :is(.header-simple-search-toggle, .header-simple-search-form-submit) svg path {
+    fill: var(--color-dark-purple);
+}
+
 @media (min-width: 992px) {
     .header-simple nav ul > li.menu-item-has-children > .sub-menu {
         width: max-content;
