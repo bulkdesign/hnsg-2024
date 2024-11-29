@@ -18,9 +18,9 @@ if ( ! is_singular() && empty( $filters ) ) {
 }
 
 if ( is_search() || empty( $filters ) || ! empty( $filters['s'] ) ) {
-    $post_types = get_field( 'post_types' ) ? get_field( 'post_types' ) : apply_filters( 'doc_search_with_filter_post_types', array( 'medico', 'convenios' ) );
+    $post_types = get_field( 'post_types' ) ? get_field( 'post_types' ) : apply_filters( 'doc_search_with_filter_post_types', array( 'medico' ) );
 } else {
-    $post_types = get_field( 'post_types' ) ? get_field( 'post_types' ) : apply_filters( 'doc_search_with_filter_post_types', array( 'medico', 'convenios' ) );
+    $post_types = get_field( 'post_types' ) ? get_field( 'post_types' ) : apply_filters( 'doc_search_with_filter_post_types', array( 'medico' ) );
 }
 
 ?>
@@ -38,10 +38,10 @@ if ( is_search() || empty( $filters ) || ! empty( $filters['s'] ) ) {
                 <?php endif; ?>
 
                 <div class="doc-search-with-filter-filters-search">
-                    <button type="submit" aria-label="<?php echo esc_attr( 'Pesquise aqui pelo nome de um(a) médico(a)...', 'bulk' ); ?>">
+                    <button type="submit" aria-label="<?php echo esc_attr( 'Digite aqui o nome de um(a) médico(a) ou utilize o filtro para buscar pelas especialidades', 'bulk' ); ?>">
                         <?php theme_block_asset( 'img/search.svg' ); ?>
                     </button>
-                    <input type="text" value="<?php echo get_search_query(); ?>" name="filter_block[s]" id="s" placeholder="<?php echo esc_attr( 'Pesquise aqui pelo nome de um(a) médico(a)...', 'bulk' ); ?>" />
+                    <input type="text" value="<?php echo get_search_query(); ?>" name="filter_block[s]" id="s" placeholder="<?php echo esc_attr( 'Digite aqui o nome de um(a) médico(a) ou utilize o filtro para buscar pelas especialidades', 'bulk' ); ?>" />
                     <div class="doc-search-with-filter-filters-submit">
                         <button type="submit" class="primary-button">
                             <?php esc_attr_e( 'Apply', 'bulk' ); ?>
@@ -53,6 +53,93 @@ if ( is_search() || empty( $filters ) || ! empty( $filters['s'] ) ) {
     </div>
 
     <div class="doc-search-with-filter-content-wrapper">
+
+        <?php
+            if( is_post_type_archive() ){
+                $post_type_taxonomies = get_object_taxonomies( $queried_object->name );
+            }elseif( is_tax() ){
+                $post_type_taxonomies = array( $queried_object->taxonomy );
+            }else{
+                $post_type_taxonomies = get_object_taxonomies( $post_types );
+            }
+
+            $filter_taxonomies = get_field( 'taxonomies' ) ? get_field( 'taxonomies' ) : apply_filters( 'posts_archive_with_filter_taxonomies', $post_type_taxonomies, $queried_object );
+        ?>
+        
+        <?php if ( ! empty( $filter_taxonomies ) ) : ?>
+            <form class="doc-search-with-filter-filters">
+                <div>
+                    <div class="sr-only">
+                        <h2><?php esc_attr_e('Filters', 'bulk'); ?></h2>
+                        <p><?php esc_attr_e('Changing any of the form inputs will cause the content to refresh with the filtered results.'); ?></p>
+                    </div>
+                    <a href="#<?php echo esc_attr( theme_block_id( $block ) ); ?>-doc-search-with-filter-content-grid" class="sr-only ignore skip-filters"><?php esc_html_e( 'Skip filters', 'bulk' ); ?></a>
+                </div>
+                <input type="hidden" name="paged" value="1">
+
+                <?php if (is_array($filter_taxonomies)) : ?>
+                    <?php foreach( $filter_taxonomies as $filter_taxonomy ): ?>
+                        <?php
+                            $taxonomy_details = get_taxonomy( $filter_taxonomy );
+
+                            if ( ! is_wp_error( $taxonomy_details ) ) {
+                                $taxonomies_to_display = get_terms( array(
+                                    'taxonomy' => $filter_taxonomy,
+                                ) );
+                            }else{
+                                $taxonomies_to_display = array();
+                            }
+                        ?>
+
+                        <?php if( ! empty( $taxonomies_to_display ) ): ?>
+                        <div class="doc-search-with-filter-filters-group" data-taxonomy="<?php echo $filter_taxonomy; ?>">
+                            <div class="doc-search-with-filter-filters-group-heading">
+                                <button type="button" class="doc-search-with-filter-filters-group-clear" title="<?php printf(esc_attr__( 'Clear All %s', 'bulk' ), $taxonomy_details->label); ?>" aria-label="<?php printf(esc_attr__( 'Clear All %s', 'bulk' ), $taxonomy_details->label); ?>" tabindex="-1" aria-hidden disabled></button>
+                                <button type="button" class="doc-search-with-filter-filters-group-title" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                                    <h3><?php echo $taxonomy_details->label; ?></h3>
+                                </button>
+                            </div>
+                            <div class="doc-search-with-filter-filters-group-options" aria-label="<?php echo $taxonomy_details->label; ?>">
+                                <?php
+                                    if ( ! $uses_custom_query ) {
+                                        $selected_taxonomies = get_query_var( $taxonomy_details->query_var );
+                                    }else{
+                                        if( ! empty( $filters['taxonomy'][$taxonomy_details->name] ) ){
+                                            $selected_taxonomies = $filters['taxonomy'][$taxonomy_details->name];
+                                        }
+                                    }
+                                    if( ! empty($selected_taxonomies) && ! is_array($selected_taxonomies) ){
+                                        $selected_taxonomies = explode(',', get_query_var( $taxonomy_details->query_var ));
+                                    }
+                                    if( empty( $selected_taxonomies ) ){
+                                        $selected_taxonomies = array();
+                                    }
+                                ?>
+                                <?php foreach( $taxonomies_to_display as $current_taxonomy ) : ?>
+                                <div class="doc-search-with-filter-filters-group-options-item">
+                                    <?php
+                                        $field_id = $current_taxonomy->taxonomy . '_' . $current_taxonomy->term_id;
+                                        $field_name = 'filter_block[taxonomy][' . $taxonomy_details->name . '][]';
+                                    ?>
+                                    <input type="checkbox" name="<?php echo $field_name; ?>" id="<?php echo $field_id; ?>" value="<?php echo $current_taxonomy->slug; ?>" <?php echo in_array( $current_taxonomy->slug, $selected_taxonomies, false ) ? 'checked' : ''; ?>>
+                                    <label for="<?php echo $field_id; ?>">
+                                        <?php echo $current_taxonomy->name; ?>
+                                    </label>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <div class="doc-search-with-filter-filters-submit">
+                    <button type="submit" class="primary-button">
+                        <?php esc_attr_e( 'Apply', 'bulk' ); ?>
+                    </button>
+                </div>
+            </form>
+        <?php endif; ?>
 
 		<div class="doc-search-with-filter-content-loading">
 			<?php theme_block_asset( 'img/loading.svg' ); ?>
@@ -122,16 +209,20 @@ if ( is_search() || empty( $filters ) || ! empty( $filters['s'] ) ) {
                                     <?php endif; ?>
 
                                     <!-- ESPECIALIDADE -->
-                                    <?php $especialidade = get_field( 'especilidade_medica', get_the_ID() ); ?>
-                                    <?php $especialidade_titulo = get_the_title( $especialidade ); ?>
-                                        
-                                    <?php if ( ! empty( $especialidade_titulo ) ) : ?>
+                                    <?php $especialidades = get_the_terms( get_the_ID(), 'especialidade' ); ?>
+                                    <?php if (! empty( $especialidades ) ): ?>
                                         <h4>Especialidade</h4>
-                                        <?php echo $especialidade_titulo; ?>
+                                        <?php if ( ! empty( $especialidades ) ) : ?>
+                                            <?php foreach ( $especialidades as $especialidade ) : ?>
+                                                <?php echo $especialidade->name; ?>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
                                     <?php endif; ?>
 
                                     <!-- CONSULTORIO NO HOSPITAL -->
-                                    <p>Consultório no Hospital: <strong><?php the_field( 'atende_no_hospital', get_the_ID() ); ?></strong></p>
+                                    <div class="doc-search-with-filter-content-office">
+                                        <p>Consultório no Hospital: <strong><?php the_field( 'atende_no_hospital', get_the_ID() ); ?></strong></p>
+                                    </div>
 
                                     <a href="<?php the_permalink(); ?>" class="read-more">
                                         <span class="primary-button"><?php esc_html_e( 'Mais informações', 'bulk' ); ?></span>
