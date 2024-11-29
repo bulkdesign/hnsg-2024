@@ -33,19 +33,6 @@
                 <h4>Informações:</h4>
 
                 <?php 
-                    $especialidades = get_field('especilidade_medica');
-
-                    if (! empty( $especialidades) ) {
-                        $especialidade_names = [];
-
-                        foreach ($especialidades as $post_id) {
-                            $especialidade = get_post($post_id);
-                            $especialidade_names[] = $especialidade->post_title;
-                        }
-                    }
-                ?>
-
-                <?php 
                     $locais = get_field('locais_atendimento');
 
                     if (! empty( $locais ) ) {
@@ -77,18 +64,20 @@
                         <li><strong>CRM:</strong> <?php the_field('crm'); ?></li>
                     <?php endif; ?>
 
-                    <?php if (! empty( get_field( 'especilidade_medica' ) ) ): ?>
-					    <li><strong>Especialidade(s) Médica:</strong><br>
-                            <?php
-                                foreach ($especialidade_names as $especialidade_name) {
-                                    echo '– ' . $especialidade_name . "<br>";
-                                }
-                            ?>
-                        </li>
+                    <?php $especialidades = get_the_terms( get_the_ID(), 'especialidade' ); ?>
+                    <?php if (! empty( $especialidades ) ): ?>
+					    <strong>Especialidade(s) Médica:</strong>
+                        <?php if ( ! empty( $especialidades ) ) : ?>
+                            <ul>
+                                <?php foreach ( $especialidades as $especialidade ) : ?>
+                                    <li>– <?php echo $especialidade->name; ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'atende_no_hospital' ) ) ): ?>
-                        <li><strong>Atende no Hospital?</strong> <?php the_field('atende_no_hospital'); ?>
+                        <li><strong>Tem Consultório no Hospital?</strong> <?php the_field('atende_no_hospital'); ?>
                     <?php endif; ?>
 
                     <?php if (! empty( get_field( 'obs_medico' ) ) ): ?>
