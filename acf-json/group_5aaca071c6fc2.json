@@ -24,11 +24,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_5908eefa7f37a",
+            "key": "field_6734bb4459924",
             "label": "Especialidades",
-            "name": "especilidade_medica",
+            "name": "especialidades",
             "aria-label": "",
-            "type": "relationship",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -37,19 +37,15 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "post_type": [
-                "especialidades"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search"
-            ],
-            "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ],
+            "taxonomy": "especialidade",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "field_type": "checkbox",
+            "bidirectional": 0,
+            "multiple": 0,
+            "allow_null": 0,
             "bidirectional_target": []
         },
         {
@@ -217,5 +213,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709024286
+    "modified": 1732869420
 }
