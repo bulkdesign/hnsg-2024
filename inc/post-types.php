@@ -50,24 +50,8 @@ register_post_type('convenios',
         'has_archive'		=> true,
         'menu_icon'			=> 'dashicons-admin-multisite',
         'supports'			=> array('title', 'page-attributes', 'thumbnail'),
-        'taxonomies'        => array('category'),
+        'taxonomies'        => array('convenio'),
         'hierarchical'      => true,
-    )
-);
-
-
-// Convênios Cobertura
-register_post_type('convenios_cobertura',
-    array(
-        'labels'			=> array(
-            'name'			=> __('Cobertura dos Convênios'),
-            'singular_name' =>	__('Cobertura do Convênio')
-            ),
-        'menu_position'     => 10,
-        'public'			=> true,
-        'has_archive'		=> true,
-        'menu_icon'			=> 'dashicons-groups',
-        'supports'			=>	array('title', 'page-attributes'),
     )
 );
 
