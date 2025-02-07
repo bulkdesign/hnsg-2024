@@ -25,7 +25,6 @@
         <?php if ($convenios->have_posts()):
             
             while($convenios->have_posts()): $convenios->the_post(); ?>
-
                 <div class="single-post-thumbnail">
                     <?php the_post_thumbnail( 'medium' ); ?>
                 </div>
@@ -34,16 +33,15 @@
                     <h3><?php the_title(); ?></h3>
                 <?php } ?>
 
-                <?php $posts = get_field('convenios_cobertura'); 
-                    $obsConv = get_field('obs_conv');
-                ?>
-                <?php if( $posts ): ?>
+                <?php $coberturas = get_field('coberturas'); ?>
+                <?php $obsConv = get_field('obs_conv'); ?>
+
+                <?php if ( $coberturas ): ?>
                     <h4>Áreas de Atendimento:</h4>
                     <ul>
-                        <?php foreach( $posts as $post): ?>
-                            <?php setup_postdata($post); ?>
+                        <?php foreach( $coberturas as $cobertura): ?>
                             <li>
-                                <?php the_title(); ?>
+                                <?php echo $cobertura->name; ?>
                             </li>
                         <?php endforeach; ?>
 
@@ -53,8 +51,7 @@
                             </li>
                         <?php endif ?>
                     </ul>
-                <?php endif; ?>
-                        
+                <?php endif; ?>     
             <?php endwhile; ?>
 
         <?php endif; wp_reset_postdata(); ?>
