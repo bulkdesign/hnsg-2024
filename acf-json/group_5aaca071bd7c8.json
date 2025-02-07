@@ -1,13 +1,13 @@
 {
     "key": "group_5aaca071bd7c8",
-    "title": "Opções de Convenios",
+    "title": "Opções de Convênios",
     "fields": [
         {
-            "key": "field_59417d5153f45",
-            "label": "Locais de Cobertura",
-            "name": "convenios_cobertura",
+            "key": "field_67a5cece9348e",
+            "label": "Coberturas",
+            "name": "coberturas",
             "aria-label": "",
-            "type": "relationship",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,19 +16,15 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "post_type": [
-                "convenios_cobertura"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search"
-            ],
-            "max": "",
-            "min": 0,
-            "elements": [
-                "post_type"
-            ],
+            "taxonomy": "cobertura",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "checkbox",
+            "bidirectional": 0,
+            "multiple": 0,
+            "allow_null": 0,
             "bidirectional_target": []
         },
         {
@@ -72,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737060712
+    "modified": 1738919839
 }
